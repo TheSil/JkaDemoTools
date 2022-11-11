@@ -9,10 +9,6 @@ To make release x64 solution for Visual Studio 2022:
 
 Downloading and building all the dependencies will take some time. Solution file will be generated in build/JkaDemoTools.sln. Selecting the desired project and changing the build from Debug to Release compiles fine in VS2022.
 
-Some things that have not been done during the conversion:
- - the icon is not used in the Qt 6, should be simple update if needed
- - the code is in a bad shape, it's one of my first C++ works, so it even has a commented code! (ok I have done so basic code sanitation, but the design is still what it is, take it or not :) )
-
 Following is a summary of included components based on my recolection. Some of these tools were released on jkhub.org back in the days.
 
 # Demo Manipulator

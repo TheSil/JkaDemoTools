@@ -8,8 +8,9 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-add_executable(DemoCutter WIN32 
+add_executable(DemoCutter WIN32
     main.cc
+    resource.rc
     cutter.cc cutter.h
     gui.cc gui.h
     gui_ui.h
