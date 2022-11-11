@@ -8,6 +8,8 @@ conan_basic_setup(KEEP_RPATHS)
 set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 
 add_subdirectory(DemoCutter)
+add_subdirectory(DemoSmoother)
+
 
 
 
