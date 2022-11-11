@@ -1,5 +1,3 @@
-cmake_minimum_required(VERSION 3.4)
-
 add_executable(DemoSmoother 
     smoother.cc
     ../DemoManipulator/demo.cc ../DemoManipulator/demo.h
@@ -12,5 +10,8 @@ add_executable(DemoSmoother
     ../DemoManipulator/netfields.h
  )
 
+include_directories(${CMAKE_SOURCE_DIR}/DemoManipulator)
+
+target_link_libraries(DemoSmoother DemoManipulator)
 target_link_libraries(DemoSmoother ${CONAN_LIBS})
 

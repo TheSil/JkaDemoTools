@@ -1,5 +1,3 @@
-cmake_minimum_required(VERSION 3.4)
-
 list(APPEND CMAKE_PREFIX_PATH ${CMAKE_BINARY_DIR})
 
 find_package(Qt6 COMPONENTS Widgets Core Gui REQUIRED)
@@ -15,15 +13,10 @@ add_executable(DemoCutter WIN32
     cutter.cc cutter.h
     gui.cc gui.h
     gui_ui.h
-    ../DemoManipulator/demo.cc ../DemoManipulator/demo.h
-    ../DemoManipulator/huffman.cc
-    ../DemoManipulator/instruction.cc ../DemoManipulator/instruction.h
-    ../DemoManipulator/message.cc ../DemoManipulator/message.h
-    ../DemoManipulator/messagebuffer.cc ../DemoManipulator/messagebuffer.h
-    ../DemoManipulator/state.cc ../DemoManipulator/state.h
-    ../DemoManipulator/defs.h
-    ../DemoManipulator/netfields.h
- )
+)
 
+include_directories(${CMAKE_SOURCE_DIR}/DemoManipulator)
+
+target_link_libraries(DemoCutter DemoManipulator)
 target_link_libraries(DemoCutter ${CONAN_LIBS})
 
