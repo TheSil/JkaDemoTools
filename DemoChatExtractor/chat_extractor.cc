@@ -1,4 +1,4 @@
-#include "..\DemoManipulator\demo.h"
+#include "demo.h"
 #include <iostream>
 #include <fstream>
 

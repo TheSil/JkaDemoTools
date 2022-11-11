@@ -1,7 +1,7 @@
 #ifndef CUTTER_H
 #define CUTTER_H
 
-#include "..\DemoManipulator\demo.h"
+#include "demo.h"
 
 using namespace DemoJKA;
 

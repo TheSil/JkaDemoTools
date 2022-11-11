@@ -14,7 +14,6 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QMainWindow* parent = 0);
 
-
 private slots:
     void on_inputFileButton_clicked();
     void on_outputFileButton_clicked();
@@ -31,11 +30,7 @@ private:
 
     QString formatTime(int seconds);
 
-
 };
 //! [1]
-
-
-
 
 #endif

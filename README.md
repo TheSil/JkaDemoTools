@@ -17,7 +17,9 @@ Common source files for tools for parsing the demo files.
 # Demo Cutter
 GUI Qt base application for cliping the demo file into shorter and smaller demo file, based on selected time range.
 
-Slightly older version of the tool was released [here](https://jkhub.org/files/file/1342-demo-cutter/).
+<img src="./DemoCutter/CutterPreview.png"> 
+
+Some versions are also released [here](https://jkhub.org/files/file/1342-demo-cutter/).
 
 # Demo Smoother
 Command-line tool that optimizes selected demo file for size as well as makes the players movements smoother (remove the "laggy" movements caused by network latency).
@@ -31,3 +33,6 @@ Command-line tool for extracting chat from the demo into either text file or htm
 
     DemoChatExtractor 1952_ctf_nelvaan.dm_26 chat.html -html
 
+HTML example output:
+
+<img src="./DemoChatExtractor/ChatExtractorPreview.png"> 

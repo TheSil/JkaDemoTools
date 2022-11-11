@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 #include <map>
-#include "..\DemoManipulator\demo.h"
+#include "demo.h"
 #include <time.h>
 
 using namespace DemoJKA;

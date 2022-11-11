@@ -3,7 +3,6 @@
 #pragma comment(lib, "dwrite")
 
 Snapshot* getFirstSnapshot(Message* message) {
-
     for (int i = 0; i < message->getInstructionsCount(); ++i)
         if (message->getInstruction(i)->getType() == INSTR_SNAPSHOT)
             return message->getInstruction(i)->getSnapshot();
@@ -150,7 +149,6 @@ void Cutter::cutFromTime(Demo* demo, int time, int mapIndex) {
         ++i;
     }
     /* i is now index to the very first snapshot for new demo */
-
 
     if (i == nextMapMessageindex)
         throw DemoException("starting time was not found");
@@ -377,5 +375,4 @@ void Cutter::cutToTime(Demo* demo, int time, int mapIndex) {
         demo->unloadMessage(i);
 
     demo->deleteMessage(i, demo->getMessageCount());
-
 }

@@ -200,5 +200,4 @@ void MainWindow::on_outputFileButton_clicked() {
     realTimeEnd = clock();
 
     ui.statusbar->showMessage("Done! (" + QString::number(((float)(realTimeEnd - realTimeBegin) / CLOCKS_PER_SEC)) + "s)");
-
 }
