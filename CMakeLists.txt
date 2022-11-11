@@ -9,7 +9,7 @@ set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 
 add_subdirectory(DemoCutter)
 add_subdirectory(DemoSmoother)
-
+add_subdirectory(DemoChatExtractor)
 
 
 
