@@ -14,21 +14,19 @@
 using namespace DemoJKA;
 using namespace std;
 
-//ofstream logfile("output.log");
+bool CheckArguments(int argCount) {
+    if (argCount != 7)
+        return false;
 
-bool CheckArguments(int argCount){
-	if (argCount != 7)
-		return false;
-
-	return true;
+    return true;
 }
 
-int main(int argc, char** argv){
+int main(int argc, char** argv) {
 
-	DemoJKA::MessageBuffer::initHuffman();
+    DemoJKA::MessageBuffer::initHuffman();
     QApplication app(argc, argv);
-	MainWindow mainWindow;
-	mainWindow.show();
+    MainWindow mainWindow;
+    mainWindow.show();
     return app.exec();
 
 }

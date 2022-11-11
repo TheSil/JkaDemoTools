@@ -12,47 +12,47 @@ class MessageBuffer;
 
 class Message
 {
-friend class Demo;
-friend class DemoImpl;
+    friend class Demo;
+    friend class DemoImpl;
 
 private:
-	MessageImpl*	impl;
+    MessageImpl* impl;
 
-	void			load(std::ifstream& is);
-	void			save(std::ofstream& os) const;
+    void load(std::ifstream& is);
+    void save(std::ofstream& os) const;
 
 public:
 
-	//this is ugly, i should instead create
-	//some loader class that will be able to
-	//save/load all of instructions and states
-	//still using shared buffer
-	//Demo::Loader with access only from class Demo
-	//and will be friend to both Instruction and State
-	static MessageBuffer	buffer;
+    //this is ugly, i should instead create
+    //some loader class that will be able to
+    //save/load all of instructions and states
+    //still using shared buffer
+    //Demo::Loader with access only from class Demo
+    //and will be friend to both Instruction and State
+    static MessageBuffer buffer;
 
-	Message();
-	~Message();
-	
-	void					clear();
+    Message();
+    ~Message();
 
-	static bool				forceVehicleLoad;
+    void clear();
 
-	bool					isLoad() const;
+    static bool forceVehicleLoad;
 
-	void					setSeqNumber(int seq);
-	void					setRelAcknowledge(int rel);
+    bool isLoad() const;
 
-	int						getSeqNumber() const;
-	int						getRelAcknowledge() const;
+    void setSeqNumber(int seq);
+    void setRelAcknowledge(int rel);
 
-	Instruction*			getInstruction(int id);
-	int						getInstructionsCount() const;
+    int getSeqNumber() const;
+    int getRelAcknowledge() const;
 
-	//delete instructions in range [id,endid)
-	void					deleteInstruction(int id, int n=1);
+    Instruction* getInstruction(int id);
+    int getInstructionsCount() const;
 
-	bool					saveMessage(std::ofstream& os) const;
+    //delete instructions in range [id,endid)
+    void deleteInstruction(int id, int n = 1);
+
+    bool saveMessage(std::ofstream& os) const;
 };
 
 DEMO_NAMESPACE_END
