@@ -1,0 +1,6 @@
+[requires]
+qt/6.3.1
+
+[generators]
+cmake
+cmake_find_package_multi
