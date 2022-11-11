@@ -1141,5 +1141,4 @@ bool VehicleState::isAtributeInteger(int id) const {
     return !isAtributeFloat(id);
 }
 
-
 DEMO_NAMESPACE_END

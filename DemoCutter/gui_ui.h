@@ -11,7 +11,7 @@
 #ifndef GUI_UI_H
 #define GUI_UI_H
 
-#include "../DemoManipulator/demo.h"
+#include "demo.h"
 #include "cutter.h"
 
 #pragma comment(lib, "shcore.lib")
@@ -35,10 +35,11 @@ Q_IMPORT_PLUGIN(QWindowsIntegrationPlugin);
 #include <QtWidgets/QFileDialog>
 #include <QtWidgets/QLabel>
 
-#define VERSION "v0.9.11"
+#define VERSION "v0.9.12"
 
 /*
-
+ 
+v0.9.12 - integrated with Qt6/Conan/Cmake
 v0.9.11 - relaxed checks to deal with delta from invalid frame
 v0.9.10 - extented minutes limit from 999 to 9999
 v0.9.9 - ia32 - thx hugo
@@ -89,7 +90,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->setFixedSize(377, 246);
+        MainWindow->setFixedSize(400, 246);
 
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
@@ -97,21 +98,21 @@ public:
         //Step1
         groupBoxStep1 = new QGroupBox(centralwidget);
         groupBoxStep1->setObjectName(QString::fromUtf8("groupBoxStep1"));
-        groupBoxStep1->setGeometry(QRect(0, 10, 381, 51));
+        groupBoxStep1->setGeometry(QRect(10, 10, 381, 51));
 
         inputFileButton = new QPushButton(groupBoxStep1);
         inputFileButton->setObjectName(QString::fromUtf8("inputFileButton"));
-        inputFileButton->setGeometry(QRect(290, 20, 75, 21));
+        inputFileButton->setGeometry(QRect(290, 25, 75, 21));
 
         inputFileName = new QLineEdit(groupBoxStep1);
         inputFileName->setObjectName(QString::fromUtf8("inputFileName"));
-        inputFileName->setGeometry(QRect(10, 20, 271, 21));
+        inputFileName->setGeometry(QRect(10, 25, 271, 21));
         inputFileName->setReadOnly(true);
 
         //Step2
         groupBoxStep2 = new QGroupBox(centralwidget);
         groupBoxStep2->setObjectName(QString::fromUtf8("groupBoxStep2"));
-        groupBoxStep2->setGeometry(QRect(0, 60, 381, 91));
+        groupBoxStep2->setGeometry(QRect(10, 70, 381, 91));
 
         beginMap = new QComboBox(groupBoxStep2);
         beginMap->setObjectName(QString::fromUtf8("beginMap"));
@@ -151,16 +152,16 @@ public:
         //Step3
         groupBoxStep3 = new QGroupBox(centralwidget);
         groupBoxStep3->setObjectName(QString::fromUtf8("groupBoxStep3"));
-        groupBoxStep3->setGeometry(QRect(0, 160, 381, 51));
+        groupBoxStep3->setGeometry(QRect(10, 170, 381, 51));
 
         outputFileButton = new QPushButton(groupBoxStep3);
         outputFileButton->setObjectName(QString::fromUtf8("outputFileButton"));
-        outputFileButton->setGeometry(QRect(290, 20, 75, 21));
+        outputFileButton->setGeometry(QRect(290, 25, 75, 21));
         outputFileButton->setDisabled(true);
 
         outputFileName = new QLineEdit(groupBoxStep3);
         outputFileName->setObjectName(QString::fromUtf8("outputFileName"));
-        outputFileName->setGeometry(QRect(10, 20, 271, 21));
+        outputFileName->setGeometry(QRect(10, 25, 271, 21));
         outputFileName->setDisabled(true);
         outputFileName->setReadOnly(true);
 

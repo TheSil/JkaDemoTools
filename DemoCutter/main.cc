@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 #include <map>
-#include "..\DemoManipulator\demo.h"
+#include "demo.h"
 #include "gui.h"
 #include <time.h>
 #include <sstream>
@@ -10,6 +10,8 @@
 
 #include <QtWidgets\QApplication>
 #include <QtCore\QFile>
+#include <QApplication>
+#include <QStyleFactory>
 
 using namespace DemoJKA;
 using namespace std;
@@ -22,11 +24,10 @@ bool CheckArguments(int argCount) {
 }
 
 int main(int argc, char** argv) {
-
     DemoJKA::MessageBuffer::initHuffman();
     QApplication app(argc, argv);
     MainWindow mainWindow;
     mainWindow.show();
+    app.setStyle(QStyleFactory::create("Fusion"));
     return app.exec();
-
 }
